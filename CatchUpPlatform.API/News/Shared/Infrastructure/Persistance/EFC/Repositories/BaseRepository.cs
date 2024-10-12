@@ -1,5 +1,6 @@
 using CatchUpPlatform.API.News.Shared.Domain.Repositories;
 using CatchUpPlatform.API.News.Shared.Infrastructure.Persistance.EFC.Configuration;
+using Microsoft.EntityFrameworkCore;
 
 namespace CatchUpPlatform.API.News.Shared.Infrastructure.Persistance.EFC.Repositories;
 
@@ -33,8 +34,7 @@ public class BaseRepository<TEntity>: IBaseRepository<TEntity>where TEntity: cla
         Context.Set<TEntity>().Remove(entity);
     }
 
-    public Task<IEnumerable<TEntity>> ListAsync()
+    public async Task<IEnumerable<TEntity>> ListAsync()
     {
-        throw new NotImplementedException();
-    }
+        return await Context.Set<TEntity>().ToListAsync();    }
 }
