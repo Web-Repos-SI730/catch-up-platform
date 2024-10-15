@@ -44,8 +44,7 @@ else if (builder.Environment.IsProduction())
 
 // Configure Dependency Injection
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
-builder.Services.AddScoped<UnitOfWork>(); // Add this line if UnitOfWork is used directly without an interface
-
+ 
 // News Bounded Context Dependency Injection
 builder.Services.AddScoped<IFavoriteSourceRepository, FavoriteSourceRepository>();
 builder.Services.AddScoped<IFavoriteSourceCommandService, FavoriteSourceCommandService>();
