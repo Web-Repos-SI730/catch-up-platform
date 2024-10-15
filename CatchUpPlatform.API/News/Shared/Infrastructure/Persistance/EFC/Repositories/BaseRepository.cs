@@ -21,7 +21,6 @@ public class BaseRepository<TEntity>: IBaseRepository<TEntity>where TEntity: cla
     public async Task<TEntity?> FindByIdSync(int id)
     {
         return await Context.Set<TEntity>().FindAsync(id);
-        
     }
 
     public void Update(TEntity entity)
@@ -36,5 +35,6 @@ public class BaseRepository<TEntity>: IBaseRepository<TEntity>where TEntity: cla
 
     public async Task<IEnumerable<TEntity>> ListAsync()
     {
-        return await Context.Set<TEntity>().ToListAsync();    }
+        return await Context.Set<TEntity>().ToListAsync();    
+    }
 }
