@@ -1,4 +1,4 @@
-namespace CatchUpPlatform.API.News.Shared.Domain.Repositories;
+namespace CatchUpPlatform.API.Shared.Domain.Repositories;
 
 public interface IUnitOfWork
 {

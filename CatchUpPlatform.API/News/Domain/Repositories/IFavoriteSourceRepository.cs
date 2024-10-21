@@ -1,5 +1,6 @@
 ﻿using CatchUpPlatform.API.News.Domain.Model.Aggregates;
-using CatchUpPlatform.API.News.Shared.Domain.Repositories;
+using CatchUpPlatform.API.Shared.Domain.Repositories;
+
 
 namespace CatchUpPlatform.API.News.Domain.Repositories;
 /// <summary>
@@ -13,7 +14,7 @@ public interface IFavoriteSourceRepository: IBaseRepository<FavoriteSource>
     /// <returns>
     /// A collection of <see cref="FavoriteSource"/>that matches the <paramref name="newsApiKey"/>
     /// </returns>
-    Task<IEnumerable<FavoriteSource>>FindByNewsApiKeyAsync(string newsApiKey);
+    Task<IEnumerable<FavoriteSource>> FindByNewsApiKeyAsync(string newsApiKey);
     /// <summary>
     /// Find <see cref="FavoriteSource"/> by <paramref name="newsApiKey"/> and <paramref name="sourceId"/>
     /// </summary>
@@ -22,7 +23,8 @@ public interface IFavoriteSourceRepository: IBaseRepository<FavoriteSource>
     /// <returns>
     /// A collection of <see cref="FavoriteSource"/>
     /// </returns>
+    /// 
     /// Fijate en que solo sea un task NO METAS EL IENUMERABLE
-    Task<FavoriteSource?>FindByNewsApiKeyAndSourceIdAsync(string newsApiKey, string sourceId);
+    Task<FavoriteSource?> FindByNewsApiKeyAndSourceIdAsync(string newsApiKey, string sourceId);
     
 }

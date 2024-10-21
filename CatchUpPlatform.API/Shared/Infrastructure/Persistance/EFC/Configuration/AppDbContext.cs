@@ -2,7 +2,7 @@ using CatchUpPlatform.API.News.Domain.Model.Aggregates;
 using EntityFrameworkCore.CreatedUpdatedDate.Extensions;
 using Microsoft.EntityFrameworkCore;
 
-namespace CatchUpPlatform.API.News.Shared.Infrastructure.Persistance.EFC.Configuration;
+namespace CatchUpPlatform.API.Shared.Infrastructure.Persistance.EFC.Configuration;
 
 public class AppDbContext(DbContextOptions options): DbContext(options)
 {

@@ -1,5 +1,5 @@
-using CatchUpPlatform.API.News.Shared.Domain.Repositories;
-using CatchUpPlatform.API.News.Shared.Infrastructure.Persistance.EFC.Configuration;
+using CatchUpPlatform.API.Shared.Domain.Repositories;
+using CatchUpPlatform.API.Shared.Infrastructure.Persistance.EFC.Configuration;
 using Microsoft.EntityFrameworkCore;
 
 namespace CatchUpPlatform.API.Shared.Infrastructure.Persistance.EFC.Repositories;
@@ -13,7 +13,7 @@ public class BaseRepository<TEntity>: IBaseRepository<TEntity>where TEntity: cla
         Context = context;
     }
     
-    public async Task AddSync(TEntity entity)
+    public async Task AddAsync(TEntity entity)
     {
         await Context.Set<TEntity>().AddAsync(entity);
     }

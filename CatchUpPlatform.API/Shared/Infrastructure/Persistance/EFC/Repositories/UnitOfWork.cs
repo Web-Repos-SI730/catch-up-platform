@@ -1,5 +1,5 @@
-using CatchUpPlatform.API.News.Shared.Domain.Repositories;
-using CatchUpPlatform.API.News.Shared.Infrastructure.Persistance.EFC.Configuration;
+using CatchUpPlatform.API.Shared.Domain.Repositories;
+using CatchUpPlatform.API.Shared.Infrastructure.Persistance.EFC.Configuration;
 
 namespace CatchUpPlatform.API.Shared.Infrastructure.Persistance.EFC.Repositories;
 
